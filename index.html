@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>Bank-of-Bravos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href=stylesheet.css rel=stylesheet>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="myscript.js"></script>  
+
+
+
+</head>
+<body>
+
+
+<div class="header">
+      <div class="header-upper">
+         <img src="./img/logo.png" style="width:30%"></img>
+            <div class="header-links">
+              <a href="">Contact us</a>  &nbsp;&nbsp;&nbsp;<a href="">Privacy policy</a>&nbsp;&nbsp;&nbsp;  <a href="">Locate ATMs</a>       
+            </div>
+      </div>
+
+      <div class="header-lower">
+         <h2 class="header-title"><center>Welcome to Bank Of Bravos</center></h2>
+      </div>
+</div>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+</ol>
+
+
+<!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="img/bank1.jpg" alt="Los Angeles" style="width:120%; height:400px">
+        <div class="carousel-caption">
+          <h3>Build your City</h3>
+          <p>Take loan and build whatever you like!</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/bank2.jpg" alt="Chicago" style="width:120%; height:400px">
+        <div class="carousel-caption">
+          <h3>Secured</h3>
+          <p>No one can ever touch what is yours</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="img/bank3.jpg" alt="New York" style="width:120%; height:400px">
+        <div class="carousel-caption">
+          <h3>Pay your dues</h3>
+          <p>Iron Bank always collects its dues!</p>
+        </div>
+      </div>
+
+      </div>
+  
+    </div>
+
+<div class="existingCustomer">
+      <br>
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="uname" required><br><br>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="psw" required><br><br>
+        
+      <button onclick="openAccountHome()">Login</button><br><br>
+      <br><br><br><br>
+</div>
+
+<div style="background-color:silver;color:white;padding:14px; width:29.9%;position:absolute;right:151px;top:546px">
+  <p>Forgot Password?</p>
+</div> 
+
+
+
+<br><br><br>
+<div class="footer">
+
+<div class="footerrow">
+  
+
+<div class="footercolumn">
+</div>
+
+  <div class="footercolumn">
+    <h2>Information</h2>
+    <p><li>Privacy notice</li>
+    <li>Cookie Policy</li>
+    <li>About us</li>
+    <li>Contact us</li></p>
+  </div>
+  
+  <div class="footercolumn">
+    <h2>Customer Service</h2>
+    <p><li>Search</li>
+    <li>News</li>
+    <li>Blog</li>
+    <li>New Products</li></p>
+  </div>
+  
+  <div class="footercolumn">
+    <h2><center>Follow us</center></h2>
+    <p>
+   <ul id="footerlinks">
+  <li>&nbsp;&nbsp;&nbsp;<img src="./img/facebook.png" style="width:20%">  </li>
+  <li>&nbsp;&nbsp;&nbsp;<img src="./img/twitter.png" style="width:20%"></li>
+  <li>&nbsp;&nbsp;&nbsp;<img src="./img/youtube.png" style="width:20%"></li>
+</ul>  
+</p>
+  </div>
+</div>
+
+
+  
+<div id="alertbox" class="alert warning">
+
+ <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>  
+  <font size="+1"><strong>Warning!</strong> Login credentials are incorrect</font>
+</div>
+
+ 
+
+
+
+<br><br>
+<center>Designed by<br><img src="./img/sign.png"></center>
+</div>
+</body>
+</html>
