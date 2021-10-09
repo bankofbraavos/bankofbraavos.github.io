@@ -1,0 +1,23 @@
+.loader-container{
+    position: fixed;
+    height:100%;
+    width:100%;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 99;
+}
+
+mat-spinner{
+    margin-top: 18em;
+    margin-left: 45rem;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+
+    mat-spinner{
+        margin-top: 12rem;
+        margin-left: 12rem;
+    }
+}

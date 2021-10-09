@@ -1,0 +1,34 @@
+.name, .emailField{
+    width:20em;
+}
+
+.emailField{
+    margin-left:2em;
+}
+
+.category, .messageBox{
+    width: 56%;
+}
+
+.send{
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+
+    .send{
+        margin-left: 1rem;
+    }
+
+    .emailField{
+        margin-left:0rem;
+    }
+
+    .category, .messageBox{
+        width: 20em;
+    }
+   
+}

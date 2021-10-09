@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <span>
+        <mat-icon>spa</mat-icon>
+    </span>
+    <span>
+        Bank Of Braavos
+    </span>
+
+    <div class="spacer"></div>
+    <a mat-button routerLink="" *ngIf="!authenticated">Login</a>
+    <a mat-button routerLink="/customer" *ngIf="authenticated">Customers</a>
+    <a mat-button routerLink="/contact" *ngIf="authenticated">Contact Us</a>
+    <a mat-button routerLink="/about" *ngIf="!authenticated">About Us</a>
+    <a mat-raised-button color="accent" routerLink="/register" *ngIf="!authenticated">Signup</a>
+    <a mat-raised-button color="accent" (click)="signout()" *ngIf="authenticated">Signout</a>
+</mat-toolbar>
