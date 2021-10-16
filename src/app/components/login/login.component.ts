@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SignInData } from 'src/app/models/SignInData';
 import { AuthenticationService } from 'src/app/services/auth/authentication.service';
-
 
 @Component({
   selector: 'app-login',
@@ -11,13 +11,13 @@ import { AuthenticationService } from 'src/app/services/auth/authentication.serv
 })
 export class LoginComponent implements OnInit {
 
-  hidePassword = true;
+  hide = true;
   isFormValid = false;
   areCredentialsInvalid = false;
   durationInSeconds = 1;
 
 
-  constructor(private authenticationService: AuthenticationService) {
+  constructor(private authenticationService: AuthenticationService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -46,5 +46,8 @@ export class LoginComponent implements OnInit {
     signInForm.reset();
   }
 
+  public signup() {
+    this.router.navigate(['register']);
+  }
 
 }

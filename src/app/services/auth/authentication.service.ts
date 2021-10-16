@@ -8,7 +8,6 @@ import { SignInData } from 'src/app/models/SignInData';
 })
 export class AuthenticationService {
 
-
   private readonly mockUser: SignInData = new SignInData('user', 'test');
   isAuthenticated = false;
   public getUserLoggedIn= new Subject();

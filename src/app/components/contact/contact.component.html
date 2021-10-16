@@ -1,53 +1,48 @@
-<div class="container">
+<div class="content">
     <h1>Contact Us</h1>
 
-    <div class="successMsg" *ngIf="iscontacted"> 
-        <img>
-        <span>Thank you for contacting us, we will get back to you within 24 hours</span>
+    <div class="bar success" *ngIf="iscontacted">
+        <i class="succIcon">&#10003;</i> Thank you for contacting we will get back to you within 24 hours
     </div>
 
-    <div class="errorMsg" *ngIf="isFormInValid">
-        <img> 
-        <span>Please fill all fields.</span>
+    <div class="bar error" *ngIf="isFormInValid">
+        <i class="errIcon">&#9747;</i> Please fill all fields.
     </div>
+
 
     <form class="form-signin" (ngSubmit)="onSubmit(signInForm)" #signInForm="ngForm">
-    <mat-form-field appearance="outline" class="name">
-        <mat-label>Name</mat-label>
-        <input matInput name="name" ngModel required>
-    </mat-form-field>
+        <mat-form-field appearance="outline" class="name">
+            <mat-label>Name</mat-label>
+            <input matInput name="name" ngModel required>
+        </mat-form-field>
 
-    <mat-form-field appearance="outline" class="emailField">
-        <mat-label>Email</mat-label>
-        <input matInput name="email" ngModel required>
-    </mat-form-field>
+        <mat-form-field appearance="outline" class="emailField">
+            <mat-label>Email</mat-label>
+            <input matInput name="email" ngModel required>
+        </mat-form-field>
 
 
-    <br>
-    <mat-form-field appearance="outline" class="category">
-        <mat-label>Category</mat-label>
-        <mat-select name="category" ngModel required>
-            <mat-option *ngFor="let category of categories" [value]="category">
-                {{category}}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" class="category">
+            <mat-label>Category</mat-label>
+            <mat-select name="category" ngModel required>
+                <mat-option *ngFor="let category of categories" [value]="category">
+                    {{category}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
 
-    <br>
-    <mat-form-field appearance="outline" class="messageBox">
-        <textarea matInput placeholder="Message" name="messageBox" ngModel required></textarea>
-    </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" class="messageBox">
+            <textarea matInput placeholder="Message" name="messageBox" ngModel required></textarea>
+        </mat-form-field>
 
-    <br>
-    <mat-checkbox name="copy" ngModel>Send me a copy</mat-checkbox>
+        <br>
+        <mat-checkbox name="copy" ngModel>Send me a copy</mat-checkbox>
 
-    <br>
-    <button mat-raised-button color="accent" class="reset" (click)="resetForm(signInForm)">Reset</button>
-    <button mat-raised-button color="primary" class="send" type="submit">Send</button>
+        <br><br>
+        <button mat-raised-button color="accent" class="reset" (click)="resetForm(signInForm)">Reset</button>
+        <button mat-raised-button color="primary" class="send" type="submit">Send</button>
 
-</form>
-   
-   
-    
-
+    </form>
 </div>

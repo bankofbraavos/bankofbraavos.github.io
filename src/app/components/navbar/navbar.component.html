@@ -1,16 +1,22 @@
 <mat-toolbar color="primary">
     <span>
-        <mat-icon>spa</mat-icon>
+        <mat-icon class="logo">spa</mat-icon>
     </span>
     <span>
         Bank Of Braavos
     </span>
 
-    <div class="spacer"></div>
-    <a mat-button routerLink="" *ngIf="!authenticated">Login</a>
-    <a mat-button routerLink="/customer" *ngIf="authenticated">Customers</a>
-    <a mat-button routerLink="/contact" *ngIf="authenticated">Contact Us</a>
-    <a mat-button routerLink="/about" *ngIf="!authenticated">About Us</a>
-    <a mat-raised-button color="accent" routerLink="/register" *ngIf="!authenticated">Signup</a>
-    <a mat-raised-button color="accent" (click)="signout()" *ngIf="authenticated">Signout</a>
+    <div class="nav-menu">
+        <button mat-mini-fab color="primary" [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="" *ngIf="!authenticated">Login</button>
+            <button mat-menu-item routerLink="/about" *ngIf="!authenticated">About Us</button>
+            <button mat-menu-item routerLink="/contact" *ngIf="authenticated">Contact Us</button>
+            <button mat-menu-item routerLink="/customer" *ngIf="authenticated">Customers</button>
+            <button mat-menu-item (click)="signout()" *ngIf="authenticated">Signout</button>
+        </mat-menu>
+</div>
 </mat-toolbar>

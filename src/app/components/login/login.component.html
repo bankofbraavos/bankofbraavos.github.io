@@ -1,40 +1,43 @@
-<div class="container">
+<div class="content">
 
     <form class="form-signin" (ngSubmit)="onSubmit(signInForm)" #signInForm="ngForm">
         <mat-card class="mat-elevation-z4">
 
-            <mat-card-title>
+            <mat-card-title align="center">
                 <h1>APP LOGIN</h1>
             </mat-card-title>
 
+            <div class="parent">
 
-            <div class="errorMsg" *ngIf="isFormValid">
-                <img>
-                <span>Please fill all fields.</span>
+                <div class="bar error" *ngIf="isFormValid">
+                    <i class="errIcon">&#9747;</i> Please fill all fields.
+                </div>
+
+                <div class="bar error" *ngIf="areCredentialsInvalid">
+                    <i class="errIcon">&#9747;</i> Invalid user or password.
+                </div>
+
+             
+
+                <mat-form-field appearance="outline" class="uname">
+                    <mat-label>User Name</mat-label>
+                    <input matInput name="login" ngModel required autofocus>
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  </mat-form-field>
+
+                <mat-form-field appearance="outline" class="pwd">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" name="password" ngModel required>
+                    <button mat-icon-button matSuffix (click)="hide = !hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                  </mat-form-field>
+
             </div>
-
-            <div class="errorMsg" *ngIf="areCredentialsInvalid">
-                <img>
-                <span>Invalid user or password.</span>
-            </div>
-
-
-            <mat-form-field appearance="outline" class="uname">
-                <mat-label>User Name</mat-label>
-                <input matInput name="login" ngModel required autofocus>
-            </mat-form-field>
-
-            <br>
-            <mat-form-field appearance="outline" class="pwd">
-                <mat-label>Password</mat-label>
-                <input matInput [type]="hidePassword ? 'password' : 'text'" name="password" ngModel required>
-            </mat-form-field>
-
-
             <mat-card-actions align="end">
+                <button mat-raised-button color="accent" (click)="signup()">Signup</button>
                 <button mat-raised-button color="primary" type="submit">Login</button>
             </mat-card-actions>
-
 
         </mat-card>
     </form>

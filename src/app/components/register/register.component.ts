@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { IAddress, IindianStates } from 'src/app/models/address';
+import { IindianStates } from 'src/app/models/address';
 import { AddressService } from 'src/app/services/address/address.service';
 
 @Component({

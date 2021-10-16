@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
-import { CustomerTable } from 'src/app/models/customertable.model';
+import { MatTableDataSource } from '@angular/material/table';
 import { ICustomer, ICustomerTable } from 'src/app/models/customer.model';
+import { CustomerTable } from 'src/app/models/customertable.model';
 import { AuthenticationService } from 'src/app/services/auth/authentication.service';
 import { CustomerService } from 'src/app/services/customer/customer.service';
 
@@ -60,5 +60,6 @@ export class CustomerComponent implements OnInit {
     this.selectedColumn = '';
     this.filterByValue = '';
   }
+
 
 }

@@ -1,39 +1,39 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material/material.module';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { ContentComponent } from './components/content/content.component';
-import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
-import { AboutComponent } from './components/about/about.component';
-import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 import { CustomerComponent } from './components/customer/customer.component';
+import { MaterialModule } from './material/material.module';
+import { MainComponent } from './components/main/main.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { RegisterComponent } from './components/register/register.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AuthGuard } from './services/guard/auth.guard';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppInterceptor } from './interceptor/app.interceptor';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    ContentComponent,
     LoginComponent,
-    AboutComponent,
-    RegisterComponent,
     CustomerComponent,
+    MainComponent,
+    NavbarComponent,
+    RegisterComponent,
+    AboutComponent,
     ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
     FormsModule,
+    MaterialModule,
     HttpClientModule
   ],
   providers: [

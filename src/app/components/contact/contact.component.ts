@@ -8,18 +8,17 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  public categories: string[] = ['Feedback', 'Report a bug', 'Feature Request', 'Complaint'];
+  public categories: string[] = [];
   public sendCopy: boolean = false;
   public iscontacted: boolean = false;
   public isFormInValid: boolean = false;
 
-  constructor() { }
+  constructor() { 
+    this.categories= ['Feedback', 'Report a bug', 'Feature Request', 'Complaint'];
+  }
 
   ngOnInit(): void {
   }
-
-
-
 
   onSubmit(signInForm: NgForm) {
     if (signInForm.touched && signInForm.valid) {

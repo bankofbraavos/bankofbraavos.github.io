@@ -1,34 +1,17 @@
-.name, .emailField{
-    width:20em;
-}
+  .emailField, .send{
+      margin-left: 10px;
+  }
 
-.emailField{
-    margin-left:2em;
-}
-
-.category, .messageBox{
-    width: 56%;
-}
-
-.send{
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
-}
-
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 768px) {
-
-    .send{
-        margin-left: 1rem;
-    }
+  .category, .messageBox{
+     width: 46%;
+  }
+  @media only screen and (max-width: 768px) {
 
     .emailField{
-        margin-left:0rem;
+        margin-left: 0px;
     }
 
-    .category, .messageBox{
-        width: 20em;
+    .send{
+        margin-left: 3px;
     }
-   
 }

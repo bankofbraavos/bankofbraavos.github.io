@@ -1,71 +1,73 @@
-<div class="container">
+<div class="content">
 
     <h1>Register New Customer</h1>
     <p>Create your account, it's free and only takes few minutes</p>
 
-    <div class="successMsg" *ngIf="isRegistered">
-        <img>
-        <span>Thank you for registering, your account has been created successfully</span>
+
+        <div class="bar success" *ngIf="isRegistered">
+            <i class="succIcon">&#10003;</i> Your account has been created successfully.
+        </div>
+
+        <div class="bar error" *ngIf="isFormInValid">
+            <i class="errIcon">&#9747;</i> Please fill all fields.
+        </div>
+
+
+        <form class="form-signin" (ngSubmit)="onSubmit(signUpForm)" #signUpForm="ngForm">
+            <mat-form-field appearance="outline" class="name">
+                <mat-label>Name</mat-label>
+                <input matInput name="name" ngModel required autofocus>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="email">
+                <mat-label>Email</mat-label>
+                <input matInput name="email" ngModel required>
+            </mat-form-field>
+
+            <br>
+            <mat-form-field appearance="outline" class="street">
+                <mat-label>Street</mat-label>
+                <input matInput name="street" ngModel>
+            </mat-form-field>
+
+
+            <br>
+            <mat-form-field appearance="outline" class="state">
+                <mat-label>State</mat-label>
+                <mat-select name="state" ngModel (ngModelChange)="onChangeState($event)">
+                    <mat-option *ngFor="let state of states" [value]="state">
+                        {{state}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="city">
+                <mat-label>City</mat-label>
+                <mat-select name="city" ngModel>
+                    <mat-option *ngFor="let city of cities" [value]="city">
+                        {{city}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <br>
+            <mat-form-field appearance="outline" class="zipcode">
+                <mat-label>Zipcode</mat-label>
+                <input matInput name="zipcode" ngModel required>
+            </mat-form-field>
+
+            <br>
+
+            <mat-checkbox class="tanda" name="terms" ngModel>I accept the <a
+                    href="../../../assets/docs/T&C_Bank_Of_Braavos.pdf" target="_blank">Terms of Use & Privacy
+                    Policy</a>
+            </mat-checkbox>
+
+
+            <br><br>
+            <button mat-raised-button color="accent" class="btnReset" (click)="resetForm(signUpForm)">Reset</button>
+            <button mat-raised-button color="primary" class="btnRegister" type="submit">Reister Now</button>
+        </form>
+
     </div>
 
-    <div class="errorMsg" *ngIf="isFormInValid">
-        <img>
-        <span>Please fill all fields.</span>
-    </div>
-
-
-    <form class="form-signin" (ngSubmit)="onSubmit(signUpForm)" #signUpForm="ngForm">
-        <mat-form-field appearance="outline" class="name">
-            <mat-label>Name</mat-label>
-            <input matInput name="name" ngModel required autofocus>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline" class="email">
-            <mat-label>Email</mat-label>
-            <input matInput name="email" ngModel required>
-        </mat-form-field>
-
-        <br>
-        <mat-form-field appearance="outline" class="street">
-            <mat-label>Street</mat-label>
-            <input matInput name="street" ngModel>
-        </mat-form-field>
-
-
-        <br>
-        <mat-form-field appearance="outline" class="state">
-            <mat-label>State</mat-label>
-            <mat-select name="state" ngModel (ngModelChange)="onChangeState($event)">
-                <mat-option *ngFor="let state of states" [value]="state">
-                    {{state}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline" class="city">
-            <mat-label>City</mat-label>
-            <mat-select name="city" ngModel>
-                <mat-option *ngFor="let city of cities" [value]="city">
-                    {{city}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-
-        <br>
-        <mat-form-field appearance="outline" class="zipcode">
-            <mat-label>Zipcode</mat-label>
-            <input matInput name="zipcode" ngModel required>
-        </mat-form-field>
-
-        <br>
-
-        <mat-checkbox class="tanda" name="terms" ngModel>I accept the <a
-                href="../../../assets/docs/T&C_Bank_Of_Braavos.pdf" target="_blank">Terms of Use & Privacy Policy</a>
-        </mat-checkbox>
-
-
-        <br>
-        <button mat-raised-button class="btnRegister" type="submit">Reister Now</button>
-        <button mat-raised-button class="btnReset" (click)="resetForm(signUpForm)">Reset</button>
-    </form>
-</div>

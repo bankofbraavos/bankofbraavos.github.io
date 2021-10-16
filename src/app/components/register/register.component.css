@@ -1,90 +1,11 @@
-.name, .state{
-    width: 20em;
-}
-.email, .city{
-   margin-left: 1em;
-   width: 20em;
-}
 
-.street{
-    width: 41em;
-}
+  .email, .city,  .btnRegister{
+      margin-left: 10px;
+  }
 
-.tanda{
-   margin-bottom: 1em;
-}
+  @media only screen and (max-width: 768px) {
 
-a{
-    text-decoration: none;
-}
-
-p{
-    padding-bottom: 0.5rem;
-}
-
-.btnRegister{
-  background-color: #4CAF50; /* Green */
-  color: white;
-  padding: 0.5em 1em;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1em;
-  width: 12em;
-  margin-top: 1em;
-}
-
-.btnReset{
-    background-color: coral;
-  color: white;
-  padding: 0.5em 1em;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1em;
-  width: 12em;
-  margin-top: 1em;
-  margin-left: 1em;
-}
-
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 768px) {
-    .email{
-        margin-left: 0em;
-    }
-    .city{
-        margin-left: 0em;
-    }
-
-
-    .btnReset::before{
-        content: "\A";
-    }
-
-    .btnReset{
-        
-        margin-left: 0.2em;
-    }
-
-    .street{
-        width: 20em;
-    }
-
-    .zipcode{
-        width:20em;
-    }
-
- 
-
-    .successMsg{
-        font-size: 10px;
-        width: 37em;
-
-    }
-
-    p{
-        font-size: 12px;
-        margin-bottom: 0rem;
+    .email, .city,  .btnRegister{
+        margin-left: 3px;
     }
 }
-
-
